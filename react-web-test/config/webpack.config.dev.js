@@ -67,7 +67,13 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
             },
         },
         {
-            loader: require.resolve('less-loader')
+            loader: require.resolve('less-loader'),
+            options: {
+                modules: false,
+                modifyVars: {
+                    "@primary-color": "#f9c700"
+                }
+            }
         }
     ];
     if (preProcessor) {
@@ -234,6 +240,10 @@ module.exports = {
                                         },
                                     },
                                 ],
+                                ['import', {
+                                    libraryName: 'antd',
+                                    style: true
+                                }]
                             ],
                             // This is a feature of `babel-loader` for webpack (not Babel itself).
                             // It enables caching results in ./node_modules/.cache/babel-loader/
