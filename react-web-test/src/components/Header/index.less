@@ -1,4 +1,6 @@
+@import "./../../style/default";
 .header {
+  background-color: @colorM;
 
   .header-top {
     height: 60px;
@@ -20,6 +22,19 @@
 
     .breadcrumb-title {
       text-align: center;
+      font-size: @fontC;
+      &:after {
+        position: absolute;
+        content: '';
+        left: calc(11vh);
+        top: 39px;
+        //width: 10px;
+        //height: 10px;
+        //background-color: red;
+        border-top: 9px solid @colorM;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+      }
     }
 
     .weather {

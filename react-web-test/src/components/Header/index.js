@@ -8,7 +8,7 @@ export default class Header extends Component {
 
     componentWillMount() {
         this.setState({
-           userName: '河畔一角'
+           userName: '帅帅小强哥'
         });
 
         setInterval(() => {
@@ -16,7 +16,7 @@ export default class Header extends Component {
             this.setState({
                 sysTime
             });
-        }, 1000)
+        }, 1000);
 
         this.getWeatherAPIDate();
     }
@@ -27,7 +27,7 @@ export default class Header extends Component {
             url:'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
         }).then((res) => {
             if (res.status === 'success') {
-                let data = res.results[0].weather_data[0];
+                let data = res.results[0]['weather_data'][0];
                 this.setState({
                     dayPictureUrl: data.dayPictureUrl,
                     weather: data.weather
