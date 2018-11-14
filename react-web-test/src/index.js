@@ -6,7 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import Life from "./pages/demo/Life";
 import Admin from "./admin";
 import Home from "./pages/route_demo/route1/Home";
-import IRouter from "./pages/route_demo/route3/router";
+import IRouter from "./router";
+// import IRouter from "./pages/route_demo/route3/router";
 // import IRouter from "./pages/route_demo/route2/router";
 
 ReactDOM.render(<IRouter />, document.getElementById('root'));
