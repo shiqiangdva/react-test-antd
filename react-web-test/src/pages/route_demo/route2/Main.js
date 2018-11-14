@@ -8,7 +8,8 @@ export default class Main extends Component {
             <div>
                 这是Main页面
                 {/*下面的是嵌套路由的Demo演示*/}
-                <Link to="/main/a">嵌套路由</Link>
+                <Link to="/main/a">嵌套路由1</Link>
+                <Link to="/main/b">嵌套路由2</Link>
                 <hr/>
 
                 {this.props.children}

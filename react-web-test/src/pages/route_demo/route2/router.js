@@ -18,6 +18,7 @@ export default class IRouter extends Component {
                     <Route path="/main" render={() =>
                         <Main>
                             <Route path="/main/a" component={About}></Route>
+                            <Route path="/main/b" component={Topic}></Route>
                         </Main>
                     }></Route>
                     <Route path="/about" component={About}></Route>
