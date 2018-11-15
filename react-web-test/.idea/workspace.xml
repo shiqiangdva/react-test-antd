@@ -14,20 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/ui/carousel/index.less">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/form/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="311">
+              <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/ui/carousel/index.js">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="264">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -51,7 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/webpack.config.prod.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/src/pages/demo/Life.js" />
         <option value="$PROJECT_DIR$/src/components/NavLeft/index.css" />
@@ -84,7 +86,6 @@
         <option value="$PROJECT_DIR$/src/pages/route_demo/route3/Info.js" />
         <option value="$PROJECT_DIR$/src/components/Footer/index.js" />
         <option value="$PROJECT_DIR$/src/style/common.less" />
-        <option value="$PROJECT_DIR$/src/config/menuConfig.js" />
         <option value="$PROJECT_DIR$/src/pages/ui/modals/index.js" />
         <option value="$PROJECT_DIR$/src/pages/ui/modals/index.less" />
         <option value="$PROJECT_DIR$/src/pages/ui/buttons/index.less" />
@@ -98,10 +99,12 @@
         <option value="$PROJECT_DIR$/src/pages/ui/tabs/ndex.less" />
         <option value="$PROJECT_DIR$/src/pages/ui/tabs/index.js" />
         <option value="$PROJECT_DIR$/src/pages/ui/gallery/index.less" />
-        <option value="$PROJECT_DIR$/src/pages/ui/gallery/index.js" />
-        <option value="$PROJECT_DIR$/src/router.js" />
         <option value="$PROJECT_DIR$/src/pages/ui/carousel/index.less" />
         <option value="$PROJECT_DIR$/src/pages/ui/carousel/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/ui/gallery/index.js" />
+        <option value="$PROJECT_DIR$/src/config/menuConfig.js" />
+        <option value="$PROJECT_DIR$/src/router.js" />
+        <option value="$PROJECT_DIR$/src/pages/form/login.js" />
       </list>
     </option>
   </component>
@@ -139,12 +142,6 @@
               <item name="react-web-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-web-test" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-web-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-web-test" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="carousel-img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-web-test" type="b2602c69:ProjectViewProjectNode" />
@@ -195,22 +192,7 @@
               <item name="react-web-test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="nomatch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-web-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-web-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-web-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-web-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="carousel" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-web-test" type="b2602c69:ProjectViewProjectNode" />
@@ -269,12 +251,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541991882621</updated>
       <workItem from="1541991884269" duration="2756000" />
-      <workItem from="1542002773456" duration="56816000" />
+      <workItem from="1542002773456" duration="62224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59572000" />
+    <option name="totallyTimeSpent" value="64980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="23" width="1680" height="1027" extended-state="6" />
@@ -312,13 +294,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resource/menuConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="32" selection-end-line="124" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NavLeft/index.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -677,37 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/menuConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/ui/loadings/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-382">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/ui/gallery/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -723,8 +671,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/ui/carousel/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="154">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/ui/gallery/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/menuConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/form/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
