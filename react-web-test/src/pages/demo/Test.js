@@ -52,11 +52,6 @@ class Test extends Component {
         ]
     }
 
-
-    handleClick(item, key, keyPath) {
-
-    }
-
     handleNaviClick(e) {
         console.log(e);
         this.setState({
