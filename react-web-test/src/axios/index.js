@@ -27,7 +27,14 @@ export default class Axios {
             loading.style.display = 'block';
         }
 
-        const baseUrl = 'https://www.easy-mock.com/mock/5bee0db57939e615b8bbddab/reactTest';
+        let baseUrl = '';
+        const baseUrl1 = 'https://www.easy-mock.com/mock/5bee0db57939e615b8bbddab/reactTest';
+        const baseUrl2 = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
+        if (options.org) {
+            baseUrl = baseUrl2;
+        } else {
+            baseUrl = baseUrl1;
+        }
         return new Promise((resolve, reject) => {
             axios({
                 url: options.url,
@@ -36,14 +43,14 @@ export default class Axios {
                 timeout: 50000,
                 params: (options.data && options.data.params) || ''
             }).then((response) => {
+                // debugger;
                 if (options.data && options.data.isShowLoading !== false) {
                     loading = document.getElementById('ajaxLoading');
                     loading.style.display = 'none';
                 }
                 if(response.status === 200) {
-                    console.log(response);
                     let res = response.data;
-                    if (res.code === 0) {
+                    if (res.code == '0') {
                         resolve(res);
                     } else {
                         Modal.info({
