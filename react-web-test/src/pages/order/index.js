@@ -3,6 +3,7 @@ import {Card, Button, Table, Form, Select, Modal, message, DatePicker} from 'ant
 import Utils from "../../utils/utils";
 import axios from "../../axios";
 import BaseForm from '../../components/BaseForm'
+import ETable from "../../components/ETable";
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -108,28 +109,30 @@ export default class Order extends Component {
 
     // 请求接口数据
     requestList = () => {
-        let _this = this;
-        axios.ajax({
-            org: true,
-            url: '/order/list',
-            data: {
-                params: {
-                    page: this.params
-                }
-            }
-        }).then((res) => {
-            // debugger;
-            this.setState({
-                list: res.result.item_list.map((item, index) => {
-                    item.key = index;
-                    return item;
-                }),
-                pagination: Utils.pagination(res, (current) => {
-                    _this.params.page = current;
-                    _this.requestList();
-                })
-            })
-        })
+        axios.requestList(this,'/order/list',this.params,true)
+
+        // let _this = this;
+        // axios.ajax({
+        //     org: true,
+        //     url: '/order/list',
+        //     data: {
+        //         params: {
+        //             page: this.params
+        //         }
+        //     }
+        // }).then((res) => {
+        //     // debugger;
+        //     this.setState({
+        //         list: res.result.item_list.map((item, index) => {
+        //             item.key = index;
+        //             return item;
+        //         }),
+        //         pagination: Utils.pagination(res, (current) => {
+        //             _this.params.page = current;
+        //             _this.requestList();
+        //         })
+        //     })
+        // })
     };
 
     onRowClick = (record,index)=>{
@@ -236,19 +239,29 @@ export default class Order extends Component {
                 </Card>
 
                 <div className={'content-wrap'}>
-                    <Table
-                        bordered={true}
+                    {/*<Table*/}
+                        {/*bordered={true}*/}
+                        {/*columns={columns}*/}
+                        {/*dataSource={this.state.list}*/}
+                        {/*pagination={this.state.pagination}*/}
+                        {/*rowSelection={rowSelection}*/}
+                        {/*onRow={(record,index) => {*/}
+                            {/*return {*/}
+                                {/*onClick:()=>{*/}
+                                    {/*this.onRowClick(record,index);*/}
+                                {/*}*/}
+                            {/*};*/}
+                        {/*}}*/}
+                    {/*/>*/}
+
+                    <ETable
+                        updateSelectedItem={Utils.updateSelectedItem.bind(this)}
                         columns={columns}
                         dataSource={this.state.list}
+                        selectedRowKeys={this.state.selectedRowKeys}
+                        selectedIds={this.state.selectedIds}
+                        selectedItem={this.state.selectedItem}
                         pagination={this.state.pagination}
-                        rowSelection={rowSelection}
-                        onRow={(record,index) => {
-                            return {
-                                onClick:()=>{
-                                    this.onRowClick(record,index);
-                                }
-                            };
-                        }}
                     />
                 </div>
 

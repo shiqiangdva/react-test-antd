@@ -1,8 +1,34 @@
 import JsonP from 'jsonp';
 import axios from 'axios';
 import {Modal} from 'antd';
+import Utils from './../utils/utils';
 
 export default class Axios {
+
+    static requestList(_this,url,params,isMock){
+        var data = {
+            params: params,
+            isMock
+        };
+        this.ajax({
+            url,
+            data
+        }).then((data)=>{
+            if (data && data.result){
+                let list = data.result.item_list.map((item, index) => {
+                    item.key = index;
+                    return item;
+                });
+                _this.setState({
+                    list,
+                    pagination: Utils.pagination(data, (current) => {
+                        _this.params.page = current;
+                        _this.requestList();
+                    })
+                })
+            }
+        });
+    }
 
     static jsonp(options) {
         return new Promise((resolve, reject) => {
@@ -30,7 +56,7 @@ export default class Axios {
         let baseUrl = '';
         const baseUrl1 = 'https://www.easy-mock.com/mock/5bee0db57939e615b8bbddab/reactTest';
         const baseUrl2 = 'https://www.easy-mock.com/mock/5a7278e28d0c633b9c4adbd7/api';
-        if (options.org) {
+        if (options.data.isMock || options.org) {
             baseUrl = baseUrl2;
         } else {
             baseUrl = baseUrl1;
