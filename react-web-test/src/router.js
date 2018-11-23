@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch, Redirect} from 'react-router-dom';
 import App from './App';
 import Login from './pages/login';
 import Admin from './admin';
@@ -25,54 +25,62 @@ import BikeMap from './pages/map/bikeMap';
 import Bar from "./pages/echarts/bar";
 import Pie from "./pages/echarts/pie";
 import Line from "./pages/echarts/line";
+import Rich from "./pages/rich";
+import Permission from "./pages/permission";
+import Home from "./pages/home";
 
 export default class IRouter extends Component {
 
     render() {
-        return(
+        return (
             <HashRouter>
 
                 <App>
-                    <Route path="/login" component={Login}/>
-                    <Route path="/admin" render={() =>
-                        <Admin>
-                            <Switch>
-                                <Route path="/admin/ui/buttons" component={Buttons}></Route>
-                                <Route path="/admin/ui/modals" component={Modals}></Route>
-                                <Route path="/admin/ui/loadings" component={Loading}></Route>
-                                <Route path="/admin/ui/notification" component={Notice}></Route>
-                                <Route path="/admin/ui/messages" component={Message}></Route>
-                                <Route path="/admin/ui/tabs" component={Tab}></Route>
-                                <Route path="/admin/ui/gallery" component={Gallery}></Route>
-                                <Route path="/admin/ui/carousel" component={Carousels}></Route>
+                    <Switch>
+                        <Route path="/login" component={Login}/>
+                        <Route
+                            path={'/common'}
+                            render={() => {
+                                return <Common>
+                                    <Route path={'/common/order/detail/:orderId'} component={OrderDetail}/>
+                                </Common>
+                            }}
+                        />
+                        <Route path="/" render={() =>
+                            <Admin>
+                                <Switch>
+                                    <Route path="/home" component={Home}/>
+                                    <Route path="/ui/buttons" component={Buttons}/>
+                                    <Route path="/ui/modals" component={Modals}/>
+                                    <Route path="/ui/loadings" component={Loading}/>
+                                    <Route path="/ui/notification" component={Notice}/>
+                                    <Route path="/ui/messages" component={Message}/>
+                                    <Route path="/ui/tabs" component={Tab}/>
+                                    <Route path="/ui/gallery" component={Gallery}/>
+                                    <Route path="/ui/carousel" component={Carousels}/>
 
-                                <Route path="/admin/form/login" component={FormLogin}></Route>
-                                <Route path="/admin/form/reg" component={FormRegister}></Route>
-                                <Route path="/admin/table/basic" component={BasicTable}></Route>
-                                <Route path="/admin/table/high" component={HighTable}></Route>
+                                    <Route path="/form/login" component={FormLogin}/>
+                                    <Route path="/form/reg" component={FormRegister}/>
+                                    <Route path="/table/basic" component={BasicTable}/>
+                                    <Route path="/table/high" component={HighTable}/>
 
-                                <Route path="/admin/city" component={City}></Route>
-                                <Route path="/admin/order" component={Order}></Route>
-                                <Route path="/admin/user" component={User}></Route>
-                                <Route path="/admin/bikeMap" component={BikeMap} />
-                                <Route path="/admin/charts/bar" component={Bar} />
-                                <Route path='/admin/charts/pie' component={Pie}/>
-                                <Route path='/admin/charts/line' component={Line}/>
+                                    <Route path="/city" component={City}/>
+                                    <Route path="/order" component={Order}/>
+                                    <Route path="/user" component={User}/>
+                                    <Route path="/bikeMap" component={BikeMap}/>
 
-                                <Route component={NoMatch}></Route>
-                            </Switch>
-                        </Admin>
-                    }/>
+                                    <Route path="/charts/bar" component={Bar}/>
+                                    <Route path='/charts/pie' component={Pie}/>
+                                    <Route path='/charts/line' component={Line}/>
 
-                    <Route
-                        path={'/common'}
-                        render={() => {
-                            return <Common>
-                                <Route path={'/common/order/detail/:orderId'} component={OrderDetail}/>
-                            </Common>
-                        }}
-                    />
-
+                                    <Route path='/rich' component={Rich}/>
+                                    <Route path='/permission' component={Permission}/>
+                                    <Redirect to="/home" />
+                                    <Route component={NoMatch}/>
+                                </Switch>
+                            </Admin>
+                        }/>
+                    </Switch>
                 </App>
 
             </HashRouter>
